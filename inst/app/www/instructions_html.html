@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>Title</title>
+</head>
+
+<body>
+
+
+                      Here is a quick rundown of how to setup a 1 compartment hollow-fibre with this application.
+                      <br>
+                      1. In the top left menu, click on 1 compartment Hollow Fibre
+                      <br>
+                      2. In the HF-Setup tab, the first box is called Pump characteristics.
+          Here you inform the app of what pump flows your setup is able to produce.
+          This, in addition to the volumes in the bottles will condition which
+          half-lives it is possible to simulate
+                      <br>
+                      3. In the Experimental system characteristics box, you inform which
+          volumes of media you will have in the central compartment bottle,
+          in the hollow fibre cartridge, and also to which value you set the
+          media flow between the central bottle and the cartridge. At the bottom,
+          the tickbox 'is volume constant?' represents assumption on whether the
+          volume of media that you inject when you add the drug is negligible
+          when compared with the total volume in the setup. If you untick this
+          box increase of volume in the central bottle due to drug injection(s)
+          will be taken into consideration in the PK simulations.
+                      <br>
+                      4. In the Drug Characteristics box, you first give the name of the drug,
+          (only used for graph legends). Then you can select an half-life to be
+          simulated in a drop-down menu. The values in these lists are all the
+          possible half-lives able to be simulated given your pump specifications
+          and the volumes in the central bottle + cartridge. If the desired
+          half-life is not in the list, adjusting the volumes in the system or
+          using pumps with different characteristics will change the range of
+          possible half-lives. Also, you need to provide the desired peak
+          concentration after first dose and finally the duration of the
+          experiment, which is used for graphs and calculation of the total
+          amount of media needed and expanded.
+                      <br>
+                      5. In the Dosing Characteristics box, you first select the type of
+          administration, then provide info about this administration. Note that
+          for the loading dose + infusion, the infusion is continuous.
+                      <br>
+                      6. After setting all these parameters and after every time that you
+          change any parameter, click on the 'Simulate HF' button. It will
+          regenerate all outputs after a few seconds.
+                      <br>
+                      Outputs :
+                      <br>
+                      1. At the bottom right of the table you can find a table
+          recapitulating all experimental parameters plus some added calculated
+          outputs like the volume de diluant spent and pump flows. This table is
+          downloadble via the button at the bottom left in a Microsoft Word
+          format
+                      <br>
+                      2. At the bottom right, you have a diagram that graphically recapitulates
+          the setup. It is interactive so you can zoom in and out. It is
+          downloadable in .svg format by clicking on the camera icon at the top
+          of the diagram.
+                      <br>
+                      3. On the next tab, the 'Simulation plotting' tab, you first find an
+          interactable graph showing the expected drug concentrations in the
+          central bottle (dashed line), and in the cartridge (full line). In
+          normal conditions these two overlap, but if the flow from central to
+          cartridge is low enough you can distinguish them. By pointing your
+          cursor on any point of the lines, you will see the concentrations at
+          that point appear on screen. The graph is downloadable in an .svg
+          format by clicking on the camera icon at the top of the graph.
+                      <br>
+                      4. After the experiment is done, you can come back to this graph and
+          add the measured concentrations as dots on it. To do so you need to
+          upload your data in .csv format. This is done at the bottom of the graph.
+          The data needs to be formatted so that one row = one measurement,
+          which means that for the one drug case you need to have a column with
+          the time of measurement and one column for the measured concentration.
+          After uploading the csv file you will have to tell the app which
+          column label corresponds to the time (x variable) and which
+          corresponds to the conentration (y variable). After adding the points
+          to the graph, you can download the modified graph by clicking on the
+          camera icon at the top of the graph.
+                      <br>
+                      5. By clicking on the third tab 'Simulated data' you can download the
+          simulated data that was used for the simulation graph in .csv format
+          for further use.
+
+
+</body>
+</html>
