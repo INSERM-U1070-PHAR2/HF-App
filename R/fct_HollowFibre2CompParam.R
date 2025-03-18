@@ -5,8 +5,8 @@
 #' @return The return value, if any, from executing the function.
 #'
 #' @noRd
-HollowFibre2CompParam <- function (halfLifeHoursA = 10,
-                                   halfLifeHoursB = 16,
+HollowFibre2CompParam <- function (halfLifeHoursA = 7.22,
+                                   halfLifeHoursB = 7.22,
                                    Vcentral = 200,
                                    Vcartridge = 50,
                                    drugNameA = NA,
@@ -35,6 +35,8 @@ HollowFibre2CompParam <- function (halfLifeHoursA = 10,
 {
   library(plyr)
   library(dplyr)
+  if(is.na(halfLifeHoursA)){halfLifeHoursA <- 7.22} #to enable calculation at app launch
+  if(is.na(halfLifeHoursB)){halfLifeHoursB <- 7.22} #to enable calculation at app launch
   halfLifeAmin <- halfLifeHoursA * 60 #hours * minutes/hours
   halfLifeBmin <- halfLifeHoursB * 60 #hours * minutes/hours
 

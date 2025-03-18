@@ -19,6 +19,7 @@ HollowFibre1CompParam <- function(halfLifeHours=7.22,
 {
   library(plyr)
   library(dplyr)
+  if(is.na(halfLifeHours)){halfLifeHours <- 7.22} #to enable calculation at app launch
         halfLifeMin <-   halfLifeHours * 60
         lastTimePointMin <- lastTimePointHours * 60
         keMin <- log(2) / halfLifeMin
