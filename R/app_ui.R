@@ -8,6 +8,9 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
+    shinybusy::add_busy_spinner(spin = "fading-circle",
+                                position = "full-page"),
+    tags$style(".shinybusy-overlay {opacity: 0.7; background-color: #7c7c7c;content=\"loading\";}"), #to add some transparency
     # 1st page = standard hollow fiber 1 drug
     shinydashboard::dashboardPage(
       title = "HF-App",
