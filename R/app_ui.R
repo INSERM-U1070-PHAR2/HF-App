@@ -29,6 +29,9 @@ app_ui <- function(request) {
         shinydashboard::sidebarMenu(
           shinydashboard::menuItem("Start here !",
                                    tabName = "home"),
+          shinydashboard::menuItem("Quick-start guide (new tab)",
+                                   href = "www/instructions_html.html",
+                                   newtab = TRUE),
           shinydashboard::menuItem("1 compartment Hollow Fibre",
                                    shinydashboard::menuSubItem("Intravenous",tabName = "1comp"),
                                    shinydashboard::menuSubItem("First order absorption",tabName = "1compAbs"),
