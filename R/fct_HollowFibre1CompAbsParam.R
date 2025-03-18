@@ -95,7 +95,7 @@ HollowFibre1CompAbsParam <- function(halfLifeHours = 7.22,
                        t_i){
     (a_i_minus_1-a_i)/(t_i-t_i_minus_1)
   }
-
+  if(is.na(halfLifeHours)){halfLifeHours <- 7.22} #to enable calculation at app launch
   halfLifeMin <-   halfLifeHours * 60
   lastTimePointMin <- lastTimePointHours * 60
 
@@ -117,6 +117,7 @@ HollowFibre1CompAbsParam <- function(halfLifeHours = 7.22,
   f_dose <- calc_f_dose(ka,dosingIntervalHoursAbs)
 
   c_list = seq(CinfusionMin,CinfusionMax,CinfusionStep)
+
 
   optimal_v_inf_decimal_rounded <- purrr::map_dfr(c_list,~calc_max_v_inf_decimal_rounded(nInfusions,ka,f_dose,dose,.x)) %>%
     dplyr::filter(v_inf_rounded >= minInfusionVolume) |>

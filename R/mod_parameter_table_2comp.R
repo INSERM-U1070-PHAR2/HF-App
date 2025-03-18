@@ -130,7 +130,7 @@ mod_parameter_table_2comp_server <- function(id,
           print(doc, target = file)
         }
       )
-    }))
+    }), ignoreNULL = FALSE)
 
     return(parameterTable = reactive({
       values$parameterTable

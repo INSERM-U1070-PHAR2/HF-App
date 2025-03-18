@@ -138,11 +138,12 @@ mod_hollow_fiber_2comp_server <- function(id){
         imgFilePath,
         simulateButton
       )
-
+    defaultDataFilePath <- resourcePaths()['default_data']
     modelFilePath <- resourcePaths()['models']
     simulatedData <-
       mod_simulate_concentrations_2comp_server(
         "simulate_concentrations_2comp",
+        defaultDataFilePath,
         modelFilePath,
         halfLifeHoursA,
         halfLifeHoursB,

@@ -64,6 +64,8 @@ golem_add_external_resources <- function() {
                     app_sys("app/img"), )
   add_resource_path("models",
                     app_sys("app/models"), )
+  add_resource_path("default_data",
+                    app_sys("app/default_data"), )
   tags$head(favicon(),
             bundle_resources(path = app_sys("app/www"),
                              app_title = "HFApp"))

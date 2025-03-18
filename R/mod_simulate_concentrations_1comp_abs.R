@@ -18,6 +18,7 @@ mod_simulate_concentrations_1comp_abs_ui <- function(id){
 #'
 #' @noRd
 mod_simulate_concentrations_1comp_abs_server <- function(id,
+                                                         defaultDataFilePath,
                                                       modelFilePath,
                                                       halfLifeHours,
                                                       Vcentral,
@@ -39,7 +40,8 @@ mod_simulate_concentrations_1comp_abs_server <- function(id,
                                                       simulateButton){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    values <- reactiveValues()
+    defaultData <- readr::read_csv(file.path(defaultDataFilePath,"default_simulated_data_1comp_absorption.csv"))
+    values <- reactiveValues(simulatedData = defaultData)
     model <- mrgsolve::mread(file.path(modelFilePath,"HollowFiber1Comp-Vadd-Abs"))
     observeEvent(simulateButton(),
             ({

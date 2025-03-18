@@ -18,6 +18,7 @@ mod_simulate_concentrations_2comp_ui <- function(id){
 #'
 #' @noRd
 mod_simulate_concentrations_2comp_server <- function(id,
+                                                     defaultDataFilePath,
                                                      modelFilePath,
                                                      halfLifeHoursA,
                                                      halfLifeHoursB,
@@ -50,7 +51,8 @@ mod_simulate_concentrations_2comp_server <- function(id,
                                                      simulateButton){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    values <- reactiveValues()
+    defaultData <- readr::read_csv(file.path(defaultDataFilePath,"default_simulated_data_2comp.csv"))
+    values <- reactiveValues(simulatedData = defaultData)
     model <- mrgsolve::mread(file.path(modelFilePath,"HollowFiber2Comp-Vadd"))
     observeEvent(simulateButton(),
                  ({

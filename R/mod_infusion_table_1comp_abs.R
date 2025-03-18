@@ -89,7 +89,7 @@ mod_infusion_table_1comp_abs_server <- function(id,
           write.csv(values$parameterTable, file, row.names = FALSE)
         }
       )
-    }))
+    }), ignoreNULL = FALSE)
 
     return(parameterTable = reactive({
       values$parameterTable

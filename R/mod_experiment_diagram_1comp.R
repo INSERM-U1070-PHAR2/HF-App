@@ -66,7 +66,8 @@ mod_experiment_diagram_1comp_server <- function(id,
         )
       })
 
-    }))
+    }),
+    ignoreNULL = FALSE)
 
     return(HFDiagram = reactive({
       HFDiagram()

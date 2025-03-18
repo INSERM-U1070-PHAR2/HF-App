@@ -95,7 +95,7 @@ HollowFibre1CompAbsInfusionParam <- function(halfLifeHours = 7.22,
                        t_i){
     (a_i_minus_1-a_i)/(t_i-t_i_minus_1)
   }
-
+  if(is.na(halfLifeHours)){halfLifeHours <- 7.22} #to enable calculation at app launch
   halfLifeMin <-   halfLifeHours * 60
   lastTimePointMin <- lastTimePointHours * 60
 

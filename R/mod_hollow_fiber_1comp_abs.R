@@ -142,12 +142,13 @@ mod_hollow_fiber_1comp_abs_server <- function(id) {
         imgFilePath,
         simulateButton
       )
-
+    defaultDataFilePath <- resourcePaths()['default_data']
     modelFilePath <- resourcePaths()['models']
     simulatedDataReadyEventName = "simData1compAbsReady"
     simulatedData <-
       mod_simulate_concentrations_1comp_abs_server(
         "simulate_concentrations_1comp_abs",
+        defaultDataFilePath,
         modelFilePath,
         halfLifeHours,
         Vcentral,
