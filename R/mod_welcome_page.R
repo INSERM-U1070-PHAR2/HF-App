@@ -40,8 +40,8 @@ mod_welcome_page_ui <- function(id){
     HF-App: A R-Shiny application to streamline hollow-fibre experiments. R application version
   1.0.0. https://varacli.shinyapps.io/hollow_fiber_app/",
         br(),    br(),
-        "This software is free and open-source, distributed under the GNU GPL
-    licence version 3. See the full license on github"
+        "This software is free and open-source, distributed under the French
+        government open licence version 2. See the full license on github"
       ),
       box(
         title = "Contributors",
