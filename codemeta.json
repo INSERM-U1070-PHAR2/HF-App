@@ -1,0 +1,68 @@
+{
+    "@context": "https://w3id.org/codemeta/3.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Pharmacology",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-1258-8054",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Université de Poitiers, Inserm U1070, PHAR2, Poitiers, France"
+            },
+            "email": "vincent.aranzana.climent@univ-poitiers.fr",
+            "familyName": "Aranzana-Climent",
+            "givenName": "Vincent"
+        },
+        {
+            "id": "https://orcid.org/0000-0001-6443-5888",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Université de Poitiers, Inserm U1070, PHAR2, Poitiers, France"
+            },
+            "email": "alexia.chauzy@univ-poitiers.fr",
+            "familyName": "Chauzy",
+            "givenName": "Alexia"
+        },
+        {
+            "id": "https://orcid.org/0000-0001-6436-3757",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Université de Poitiers, Inserm U1070, PHAR2, Poitiers, France"
+            },
+            "email": "nicolas.gregoire@univ-poitiers.fr",
+            "familyName": "Grégoire",
+            "givenName": "Nicolas"
+        },
+        {
+            "id": "https://orcid.org/0009-0001-4631-3542",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Université de Poitiers, Inserm U1070, PHAR2, Poitiers, France"
+            },
+            "email": "noemie.prebonnaud@univ-poitiers.fr",
+            "familyName": "Prébonnaud",
+            "givenName": "Noémie"
+        }
+    ],
+    "codeRepository": "git+https://github.com/INSERM-U1070-PHAR2/HF-App/",
+    "dateCreated": "2021-02-22",
+    "dateModified": "2025-03-19",
+    "datePublished": "2021-09-01",
+    "description": "R Shiny application to streamline hollow-fiber experiment design.",
+    "keywords": [
+        "Hollow-fiber",
+        "pharmacokinetics",
+        "pharmacology",
+        "antimicrobial agents"
+    ],
+    "name": "HF-APP",
+    "programmingLanguage": "R",
+    "version": "2.0.2",
+    "developmentStatus": "active",
+    "issueTracker": "https://github.com/INSERM-U1070-PHAR2/HF-App/issues",
+    "referencePublication": "https://doi.org/10.1101/2024.12.19.629487"
+}
