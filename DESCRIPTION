@@ -8,7 +8,7 @@ Authors@R: c(
     person("Noémie", "Prébonnaud", , "noemie.prebonnaud@univ-poitiers.fr", role = c("aut", "ctb"))
   )
 Description: This app was built to help planning and conducting in vitro
-    hollow fiber experiments.
+    hollow fibre experiments.
 License: French Goverment Open Licence (etalab-2.0)
 URL: https://github.com/Vincent-AC/HF-App
 BugReports: https://github.com/Vincent-AC/HF-App/issues

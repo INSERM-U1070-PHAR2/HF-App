@@ -1,6 +1,15 @@
+# HFApp 2.0.2
+
+Minor improvements: 
+
+* Update license
+* Add local install instructions
+* Add loading screen when app is busy
+* Add tutorial to sidebar
+
 # HFApp 2.0.1
 
-* Bugfixes :
+* Bugfixes:
   * Corrected naming issue preventing simulation of "loading dose + infusion" 
   dosing regimens in 1 compartment hollow fibre
   * Corrected naming issue preventing simulation of infusions in 2 compartment 

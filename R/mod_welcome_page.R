@@ -36,9 +36,7 @@ mod_welcome_page_ui <- function(id){
     email or any other mean by clicking on the relevent icon in the
     'Contributors' box (on the right)",
         br(),    br(),
-        "To cite this application :   Vincent Aranzana-Climent, Alexia Chauzy and Nicolas Grégoire (2021).
-    HF-App: A R-Shiny application to streamline hollow-fibre experiments. R application version
-  1.0.0. https://varacli.shinyapps.io/hollow_fiber_app/",
+        "To cite this application :  Aranzana-Climent, V., Chauzy, A., Grégoire, N. & Prébonnaud, N. HF-APP. (2021). https://github.com/INSERM-U1070-PHAR2/HF-App/",
         br(),    br(),
         "This software is free and open-source, distributed under the French
         government open licence version 2. See the full license on github"
