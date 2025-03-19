@@ -1,6 +1,6 @@
 Package: HFApp
 Title: Shiny App For Hollow Fiber Experiments
-Version: 2.0.1
+Version: 2.0.2
 Authors@R: c(
     person("Vincent", "Aranzana-Climent", , "vincent.aranzana.climent@univ-poitiers.fr", role = c("aut", "cre")),
     person("Alexia", "Chauzy", , "alexia.chauzy@univ-poitiers.fr", role = c("aut", "ctb")),
@@ -10,8 +10,8 @@ Authors@R: c(
 Description: This app was built to help planning and conducting in vitro
     hollow fiber experiments.
 License: French Goverment Open Licence (etalab-2.0)
-URL: https://github.com/INSERM-U1070-PHAR2/HF-App
-BugReports: https://github.com/INSERM-U1070-PHAR2/HF-App/issues
+URL: https://github.com/Vincent-AC/HF-App
+BugReports: https://github.com/Vincent-AC/HF-App/issues
 Imports: 
     config (>= 0.3.1),
     dplyr,
@@ -22,7 +22,6 @@ Imports:
     magrittr,
     mrgsolve,
     officer,
-    pkgload,
     plotly,
     plyr,
     png,
@@ -30,11 +29,11 @@ Imports:
     RCurl,
     readr,
     shiny (>= 1.7.4),
+    shinybusy,
     shinydashboard,
     zeallot
 Suggests: 
-    spelling,
-    testthat (>= 3.0.0)
+    spelling
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
