@@ -21,8 +21,11 @@ mod_graph_concentrations_1comp_ui <- function(id) {
     varSelectInput(ns("x"),
                    "x variable:",
                    data = NULL),
-    varSelectInput(ns("y"),
-                   "y variable:",
+    varSelectInput(ns("centralColumn"),
+                   "Central compartment concentration variable:",
+                   data = NULL),
+    varSelectInput(ns("cartridgeColumn"),
+                   "Cartridge compartment concentration variable:",
                    data = NULL)
   )
 }
@@ -53,9 +56,11 @@ mod_graph_concentrations_1comp_server <- function(id,
 
     observeEvent(input$dataFile,
                  ({
-                   updateVarSelectInput(inputId = "y",
+                   updateVarSelectInput(inputId = "centralColumn",
                                         data = uploadedData())
                    updateVarSelectInput(inputId = "x",
+                                        data = uploadedData())
+                   updateVarSelectInput(inputId = "cartridgeColumn",
                                         data = uploadedData())
                  }))
 
@@ -76,25 +81,89 @@ mod_graph_concentrations_1comp_server <- function(id,
     PK1CompSimuPlot <- reactive({
       df <- uploadedData()
 
-      if (is.null(df))
+      if (is.null(df)){
         return(base_plot())
-      else
-        return({
+      } else if (!is.null(df) & is.null(input$centralColumn) & is.null(input$cartridgeColumn))
+        {return({
+
+          base_plot()
+        })}  else if (!is.null(df) & !is.null(input$centralColumn) & is.null(input$cartridgeColumn))
+        {        return({
+          req(input$centralColumn)
+
           base_plot() %>%
             plotly::add_trace(
               data = df,
               type = 'scatter',
               mode = 'markers',
               x = ~ get(input$x),
-              y = ~ get(input$y),
-              name = drugName(),
+              y = ~ get(input$centralColumn),
+              name = paste0(drugName()," Central"),
               hovertemplate = paste(
                 '<b>Concentration</b>: %{y:.2f} mg/L',
                 '<br><b>Time</b>: %{x:.2f} h'
               ),
-              color = I("red")
+              color = I('rgba(27,158,119,0.5)'),
+              size = 24,
+              symbol = "circle"
             )
-        })
+        })} else if (!is.null(df) & is.null(input$centralColumn) & !is.null(input$cartridgeColumn)){
+        return({
+          req(input$cartridgeColumn)
+
+          base_plot() %>%
+            plotly::add_trace(
+              data = df,
+              type = 'scatter',
+              mode = 'markers',
+              x = ~ get(input$x),
+              y = ~ get(input$cartridgeColumn),
+              name = paste0(drugName()," Cartridge"),
+              hovertemplate = paste(
+                '<b>Concentration</b>: %{y:.2f} mg/L',
+                '<br><b>Time</b>: %{x:.2f} h'
+              ),
+              color = I('rgba(27,158,119,0.5)'),
+              size = 24,
+              symbol = "square"
+            )
+        })} else if (!is.null(df) & !is.null(input$centralColumn) & !is.null(input$cartridgeColumn)){
+        return({
+          req(input$centralColumn,input$cartridgeColumn)
+
+          base_plot() %>%
+            plotly::add_trace(
+              data = df,
+              type = 'scatter',
+              mode = 'markers',
+              x = ~ get(input$x),
+              y = ~ get(input$centralColumn),
+              name = paste0(drugName()," Central"),
+              hovertemplate = paste(
+                '<b>Concentration</b>: %{y:.2f} mg/L',
+                '<br><b>Time</b>: %{x:.2f} h'
+              ),
+              color =  I('rgba(27,158,119,0.5)'),
+              symbol = "circle",
+              size = 24
+            )  %>%
+          plotly::add_trace(
+            data = df,
+            type = 'scatter',
+            mode = 'markers',
+            x = ~ get(input$x),
+            y = ~ get(input$cartridgeColumn),
+            name = paste0(drugName()," Cartridge"),
+            hovertemplate = paste(
+              '<b>Concentration</b>: %{y:.2f} mg/L',
+              '<br><b>Time</b>: %{x:.2f} h'
+            ),
+
+            symbol = "square",
+            color = I('rgba(27,158,119,0.5)'),
+            size = 24
+          )
+        })}
     })
 
     output$HFSim1Comp <- plotly::renderPlotly({

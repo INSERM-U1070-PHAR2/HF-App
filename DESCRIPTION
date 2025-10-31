@@ -1,6 +1,6 @@
 Package: HFApp
 Title: Shiny App For Hollow Fiber Experiments
-Version: 2.0.2
+Version: 2.1.0
 Authors@R: c(
     person("Vincent", "Aranzana-Climent", , "vincent.aranzana.climent@univ-poitiers.fr", role = c("aut", "cre")),
     person("Alexia", "Chauzy", , "alexia.chauzy@univ-poitiers.fr", role = c("aut", "ctb")),

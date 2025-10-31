@@ -22,7 +22,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_A_CENTRAL,
         name = paste(drugNameA,"Central"),
         hovertemplate = paste(
@@ -30,13 +30,13 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)', dash = 'dash')
+        color = I('rgba(27,158,119,1)')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_A_CARTRIDGE,
         name = paste(drugNameA,"Cartridge"),
         hovertemplate = paste(
@@ -44,13 +44,14 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)')
+        color = I('rgba(27,158,119,1)'),
+        line = list( dash = 'dash')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_B_CENTRAL,
         name = paste(drugNameB,"Central"),
         hovertemplate = paste(
@@ -58,13 +59,13 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)', dash = 'dash')
+        color = I('rgba(217,95,2,1)')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_B_CARTRIDGE,
         name = paste(drugNameB,"Cartridge"),
         hovertemplate = paste(
@@ -72,7 +73,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)')
+        color = I('rgba(217,95,2,1)'),
+        line = list( dash = 'dash')
       ) %>%
       layout(
         xaxis = list(title = "Time (h)"),
@@ -88,7 +90,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_A_CENTRAL,
         name = paste(drugNameA,"Central"),
         hovertemplate = paste(
@@ -96,13 +98,13 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)', dash = 'dash')
+        color = I('rgba(27,158,119,1)')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_A_CARTRIDGE,
         name = paste(drugNameA,"Cartridge"),
         hovertemplate = paste(
@@ -110,13 +112,14 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)')
+        color = I('rgba(27,158,119,1)'),
+        line = list( dash = 'dash')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_B_CENTRAL,
         name = paste(drugNameB,"Central"),
         hovertemplate = paste(
@@ -124,13 +127,13 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)', dash = 'dash')
+        color = I('rgba(217,95,2,1)')
       ) %>%
       add_trace(
         data = simulatedData,
         type = 'scatter',
         mode = 'lines',
-        x = ~ time / 60,
+        x = ~ time,
         y = ~ C_DRUG_B_CARTRIDGE,
         name = paste(drugNameB,"Cartridge"),
         hovertemplate = paste(
@@ -138,7 +141,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)')
+        color = I('rgba(217,95,2,1)'),
+        line = list( dash = 'dash')
       ) %>%
       layout(
         xaxis = list(title = "Time (h)"),
