@@ -5,7 +5,8 @@ calculatePossibleHalfLives <- function(minPumpFlow=0.4,
                                    Vcartridge=50,
                                    roundingDigits=2)
 {
-  possiblePumpFlow <- seq(minPumpFlow,maxPumpFlow,stepPumpFlow)
+  step <- ifelse(stepPumpFlow <= 0, 0.1, stepPumpFlow)
+  possiblePumpFlow <- seq(minPumpFlow,maxPumpFlow,step)
   possibleHalfLife <- ((log(2)*(Vcentral+Vcartridge))/possiblePumpFlow)/60
   return(unique(round(possibleHalfLife,roundingDigits)))
 }

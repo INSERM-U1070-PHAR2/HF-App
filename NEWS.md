@@ -1,3 +1,7 @@
+# HFApp 2.1.1
+
+* Bugfix : App was crashing when changing the step of pump value too fast
+
 # HFApp 2.1.0
 
 New feature:
