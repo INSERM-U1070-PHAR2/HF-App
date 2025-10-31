@@ -17,7 +17,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CENTRAL,
           name = paste(drugName,"Central"),
           hovertemplate = paste(
@@ -31,7 +31,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CARTRIDGE,
           name = paste(drugName,"Cartridge"),
           hovertemplate = paste(
@@ -55,7 +55,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CENTRAL,
           name = paste(drugName,"Central"),
           hovertemplate = paste(
@@ -69,7 +69,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CARTRIDGE,
           name = paste(drugName,"Cartridge"),
           hovertemplate = paste(
@@ -94,7 +94,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CENTRAL,
           name = paste(drugName,"Central"),
           hovertemplate = paste(
@@ -108,7 +108,7 @@ HollowFibre1CompPlot  <-
           data = simulated_data,
           type = 'scatter',
           mode = 'lines',
-          x = ~ time / 60,
+          x = ~ time,
           y = ~ C_DRUG_CARTRIDGE,
           name = paste(drugName,"Cartridge"),
           hovertemplate = paste(

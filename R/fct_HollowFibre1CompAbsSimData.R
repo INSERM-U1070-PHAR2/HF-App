@@ -163,7 +163,8 @@ HollowFibre1CompAbsSimData  <- function(model,
       data_set(input) %>%
       param(parameterValues) %>%
       mrgsim(end = lastTimePointMin) %>%
-      as_tibble
+      as_tibble |>
+      mutate(time = time / 60) #reconvert time to hours
 
   return(simulated_data)
 }

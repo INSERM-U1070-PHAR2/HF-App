@@ -158,7 +158,8 @@ HollowFibre1CompSimData  <- function(model,
       ev(dose) %>%
       param(parameterValues) %>%
       mrgsim(end = lastTimePointMin) %>%
-      as_tibble
+      as_tibble |>
+      mutate(time = time / 60) #reconvert time to hours
 
   }
 
