@@ -1,3 +1,14 @@
+# HFApp 2.1.0
+
+New feature:
+* Simulation plots: Added an option to plot observed cartridge and central concentration data.
+
+Improvements:
+* Made simulation plot colors colorblind friendly
+
+Internal changes:
+* Time column in simulations is now in hours by default (was minutes)
+
 # HFApp 2.0.2
 
 Minor improvements: 
