@@ -30,7 +30,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)', dash = 'dash')
+        color = I('rgba(27,158,119,1)')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -44,7 +44,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)')
+        color = I('rgba(27,158,119,1)'),
+        line = list( dash = 'dash')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -58,7 +59,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)', dash = 'dash')
+        color = I('rgba(217,95,2,1)')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -72,7 +73,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)')
+        color = I('rgba(217,95,2,1)'),
+        line = list( dash = 'dash')
       ) %>%
       layout(
         xaxis = list(title = "Time (h)"),
@@ -96,7 +98,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)', dash = 'dash')
+        color = I('rgba(27,158,119,1)')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -110,7 +112,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(255, 0, 0)')
+        color = I('rgba(27,158,119,1)'),
+        line = list( dash = 'dash')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -124,7 +127,7 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)', dash = 'dash')
+        color = I('rgba(217,95,2,1)')
       ) %>%
       add_trace(
         data = simulatedData,
@@ -138,7 +141,8 @@ HollowFibre2CompPlot  <- function(simulatedData,
           '<br><b>Time</b>: %{x:.2f} h'
         ),
         showlegend = FALSE,
-        line = list(color = 'rgb(0, 0, 255)')
+        color = I('rgba(217,95,2,1)'),
+        line = list( dash = 'dash')
       ) %>%
       layout(
         xaxis = list(title = "Time (h)"),
